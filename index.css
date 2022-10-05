@@ -24,3 +24,195 @@ div {
   padding: 0vw 0vh;
   margin: 0vw 0vh;
 }
+
+/*
+Template: jin
+Theme Name: jin-child
+Author: CrossPiece
+Version: 1.00
+*/
+
+/*********************************
+* タイムライン
+*********************************/
+.ptimeline-wrap{
+    margin:0 auto 2rem;
+}
+.ptimeline-wrap .ptimeline{
+    padding:0 !important;
+    list-style:none !important;
+}
+.ptimeline-wrap .ptimeline-label {
+    padding: 3px 0 0 2px;
+    color: #aaa;
+    font-size: 12px;
+    font-weight: 500;
+}
+.ptimeline-wrap .ptimeline-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 1.5;
+    color:#00bfff;
+}
+.ptimeline-wrap .ptimeline-main {
+    margin-top: 0.5em;
+    padding: 0 0 1.5em;
+    font-size: 0.9em;
+    line-height: 1.8;
+    border-bottom: dashed 1px #ddd;
+    color:#555;
+}
+.ptimeline-wrap .ptimeline-main img{
+  display:block;
+  margin:1em auto;
+}
+.ptimeline-wrap .ptimeline-item {
+    position: relative;
+    padding: 0 0 1em 1.5em !important;
+    margin-bottom:0 !important;
+    border:none;
+}
+.ptimeline-wrap .ptimeline .ptimeline-item:before {
+    content: "";
+    width: 3px;
+    background: #eee !important;
+    display: block;
+    position: absolute;
+    top: 25px;
+    bottom: -3px;
+    left: 5px;
+}
+.ptimeline-wrap .ptimeline-item:last-child:before{
+    content:none;
+}
+/*********************************
+* タイムライン マーカー
+*********************************/
+.ptimeline-wrap .ptimeline-marker{
+    display: block;
+    position: absolute;
+    content: "";
+    top: 6px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: solid 3px #00bfff;
+}
+.ptimeline-wrap .ptimeline-item:first-child .ptimeline-marker,.ptimeline-wrap .ptimeline-item:last-child .ptimeline-marker{
+    background:#00bfff;
+}
+/*四角 */
+.ptimeline-wrap .square .ptimeline-marker{
+    border-radius: 0;
+}
+/* アイコン*/
+.ptimeline-wrap .icon .ptimeline-item .ptimeline-marker{
+    content:unset;
+    border:none !important;
+    background:none !important;
+}
+.ptimeline-wrap .icon .ptimeline-item .ptimeline-marker:before{
+    font-family: "Font Awesome 5 Free";
+    top: -1px;
+    left: 0;
+    position:absolute;
+    font-weight:bold;
+    font-size:16px;
+    line-height:1;
+    color:#00bfff;
+}
+.ptimeline-wrap .icon .ptimeline-item:first-child .ptimeline-marker,.ptimeline-wrap .icon .ptimeline-item:last-child .ptimeline-marker{
+    background:none !important;
+}
+/* 画像*/
+.ptimeline-wrap .tl-img .ptimeline-item .ptimeline-marker{
+    content:unset;
+    border:none !important;
+    background:none !important;
+}
+.ptimeline-wrap .tl-img .ptimeline-item .ptimeline-marker:before {
+    content:"";
+    display:inline-block;
+    background-image:url(ここに画像URL); /* 画像1番目*/
+    background-size:contain;
+    background-repeat:no-repeat;
+    width:40px;
+    height:40px;
+    position: relative;
+    top: -4px;
+    left: -2px;
+}
+.ptimeline-wrap .tl-img li:nth-of-type(2) > .ptimeline-marker:before{
+    background-image:url(ここに画像URL) !important; /* 画像2番目*/
+}
+.ptimeline-wrap .tl-img li:nth-of-type(3) > .ptimeline-marker:before{
+    background-image:url(ここに画像URL) !important; /* 画像3番目*/
+}
+.ptimeline-wrap .tl-img li:nth-of-type(4) > .ptimeline-marker:before{
+    background-image:url(ここに画像URL) !important; /* 画像4番目*/
+}
+.ptimeline-wrap .tl-img li:nth-of-type(5) > .ptimeline-marker:before{
+    background-image:url(ここに画像URL) !important; /* 画像5番目*/
+}
+.ptimeline-wrap .tl-img .ptimeline-item {
+    padding: 0 0 1em 3em !important;
+}
+.ptimeline-wrap .tl-img .ptimeline-item:before {
+    top: 30px;
+    left: 15px;
+}
+/*********************************
+* タイムライン カラー
+*********************************/
+/* ピンク */
+.ptimeline-wrap .pink .ptimeline-title{
+    color:#f7bcbc !important; /* タイトル色 */
+}
+.ptimeline-wrap .pink .ptimeline-main{
+    color:#555 !important; /* コンテンツ色 */
+}
+.ptimeline-wrap .pink .ptimeline-marker{
+    border: solid 3px #f7bcbc !important; /* マーカー色 */
+    color:#f7bcbc; /* アイコン色 */
+}
+.ptimeline-wrap .pink .ptimeline-item:first-child .ptimeline-marker,.ptimeline-wrap .pink .ptimeline-item:last-child .ptimeline-marker{
+    background:#f7bcbc; /* マーカー色(最初と最後)*/
+}
+.ptimeline-wrap .pink .ptimeline-item .ptimeline-marker:before{
+    color:#f7bcbc !important; /* アイコン色 */
+}
+/*イエロー*/
+.ptimeline-wrap .yellow .ptimeline-title{
+    color:#fdc44f !important; /* タイトル色 */
+}
+.ptimeline-wrap .yellow .ptimeline-main{
+    color:#555 !important; /* コンテンツ色 */
+}
+.ptimeline-wrap .yellow .ptimeline-marker{
+    border: solid 3px #fdc44f !important; /* マーカー色 */
+    color:#fdc44f; /* アイコン色 */
+}
+.ptimeline-wrap .yellow .ptimeline-item:first-child .ptimeline-marker,.ptimeline-wrap .yellow .ptimeline-item:last-child .ptimeline-marker{
+    background:#fdc44f; /* マーカー色(最初と最後)*/
+}
+.ptimeline-wrap .yellow .ptimeline-item .ptimeline-marker:before{
+    color:#fdc44f !important; /* アイコン色 */
+}
+/*グリーン*/
+.ptimeline-wrap .green .ptimeline-title{
+    color:#2fcdb4 !important; /* タイトル色 */
+}
+.ptimeline-wrap .green .ptimeline-main{
+    color:#555 !important; /* コンテンツ色 */
+}
+.ptimeline-wrap .green .ptimeline-marker{
+    border: solid 3px #2fcdb4 !important; /* マーカー色 */
+    color:#2fcdb4; /* アイコン色 */
+}
+.ptimeline-wrap .green .ptimeline-item:first-child .ptimeline-marker,.ptimeline-wrap .green .ptimeline-item:last-child .ptimeline-marker{
+    background:#2fcdb4; /* マーカー色(最初と最後)*/
+}
+.ptimeline-wrap .green .ptimeline-item .ptimeline-marker:before{
+    color:#2fcdb4 !important; /* アイコン色 */
+}
